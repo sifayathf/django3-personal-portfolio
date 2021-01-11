@@ -1,0 +1,13 @@
+{%extends 'portfolio/base.html' %}
+
+{% block content %}
+
+<h3><font color="#0C3C26">{{id}} {{blog.title}}</font></h3>
+{% comment "Optional note" %}
+<h6>{{ blog.createddatetime|date:"M d Y"|upper }}</h6>
+{% endcomment %}
+<h6>--{{ blog.createddatetime|date:"F jS Y"|upper }}--</h6>
+<h4>{{blog.description}}</h4>
+<p>{{blog.blogpost|safe}}<br></p>
+
+{% endblock %}
